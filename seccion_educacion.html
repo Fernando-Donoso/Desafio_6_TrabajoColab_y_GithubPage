@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio — Fernando Donoso R.</title>
+
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSRFf5tB9RXdfy0VEMv8FQ3V7l"
+    crossorigin="anonymous"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #0f172a;        /* slate-900 */
+      --card: #111827;      /* gray-900 */
+      --text: #e5e7eb;      /* gray-200 */
+      --muted: #9ca3af;     /* gray-400 */
+      --brand: #38bdf8;     /* sky-400 */
+      --accent: #22c55e;    /* green-500 */
+      --border: #1f2937;    /* gray-800 */
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+  /*    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";*/
+      font-family: 'Raleway', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    .site-header {
+      background: linear-gradient(180deg, rgba(56,189,248,0.08), rgba(34,197,94,0.08));
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Cards */
+    .card-bg {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    /* Educación timeline */
+    .timeline {
+      position: relative;
+      margin-left: 1.5rem;
+      padding-left: 1.75rem;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0.75rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(var(--brand), var(--accent));
+      opacity: 0.6;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+    .timeline-item::marker { content: ""; }
+    .timeline-dot {
+      position: absolute;
+      left: -0.4rem; /* aligns with line */
+      top: 0.4rem;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 4px rgba(56,189,248,0.15);
+    }
+    .badge-year {
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .edu-meta {
+      color: var(--muted);
+    }
+    .edu-list {
+      margin: 0.5rem 0 0 0;
+    }
+    .edu-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header py-4">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <div>
+          <h1 class="h4 mb-1 fw-bold">Fernando Donoso R.</h1>
+          <p class="mb-0 text-secondary">Desarrollador Full‑Stack • Oracle • Web</p>
+        </div>
+      </div>
+      <nav class="d-none d-md-flex gap-3" aria-label="Navegación principal">
+        <a href="index.html">← Volver a Pagina Principal</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container my-5">
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="mb-5">
+      <div class="card-bg p-4">
+        <h2 class="h4 fw-bold mb-3"><i class="bi bi-person-badge me-2"></i>Sobre mí</h2>
+        <p class="mb-0">
+          Desarrollador técnico con experiencia en Oracle y foco en frontend/backend web. Me apasiona
+          la claridad visual, la semántica y la experiencia de usuario. Construyo soluciones limpias y escalables.
+        </p>
+      </div>
+    </section>
+
+    <!-- Educación -->
+    <section id="educacion" class="mb-5" aria-labelledby="edu-title">
+      <div class="card-bg p-4">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 id="edu-title" class="h4 fw-bold mb-0"><i class="bi bi-mortarboard me-2"></i>Educación</h2>
+          <span class="badge-year">2008 — 2025</span>
+        </div>
+
+        <div class="timeline" role="list">
+          <!-- Item 1 -->
+          <article class="timeline-item card-bg p-3" role="listitem" aria-labelledby="edu-1-title">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="d-flex align-items-start justify-content-between">
+              <div>
+                <h3 id="edu-1-title" class="h6 fw-bold mb-1">Ingeniería en Informática</h3>
+                <p class="edu-meta mb-2">Universidad Ejemplo • Santiago, Chile</p>
+              </div>
+              <span class="badge-year">2010 — 2015</span>
+            </div>
+            <ul class="edu-list">
+              <li><strong>Enfoque:</strong> Estructuras de datos, bases de datos Oracle, desarrollo web.</li>
+              <li><strong>Proyecto de título:</strong> Sistema de gestión para sector público.</li>
+              <li><strong>Logro:</strong> Reconocimiento por excelencia en desarrollo.</li>
+            </ul>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="timeline-item card-bg p-3" role="listitem" aria-labelledby="edu-2-title">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="d-flex align-items-start justify-content-between">
+              <div>
+                <h3 id="edu-2-title" class="h6 fw-bold mb-1">Diplomado en Desarrollo Web Full‑Stack</h3>
+                <p class="edu-meta mb-2">Instituto Tech • Santiago, Chile</p>
+              </div>
+              <span class="badge-year">2022</span>
+            </div>
+            <ul class="edu-list">
+              <li><strong>Stack:</strong> HTML, CSS, JavaScript, Bootstrap, Node.js.</li>
+              <li><strong>Práctica:</strong> Portafolio responsivo con enfoque en tipografía y accesibilidad.</li>
+              <li><strong>Resultado:</strong> Implementación de CI/CD y versionamiento.</li>
+            </ul>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="timeline-item card-bg p-3" role="listitem" aria-labelledby="edu-3-title">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="d-flex align-items-start justify-content-between">
+              <div>
+                <h3 id="edu-3-title" class="h6 fw-bold mb-1">Cursos y certificaciones</h3>
+                <p class="edu-meta mb-2">Aprendizaje continuo</p>
+              </div>
+              <span class="badge-year">2016 — 2025</span>
+            </div>
+            <ul class="edu-list">
+              <li><strong>Oracle:</strong> Administración y rendimiento de bases de datos.</li>
+              <li><strong>Frontend:</strong> Diseño responsivo, sistemas de color, semántica y UX.</li>
+              <li><strong>Backend:</strong> APIs REST, seguridad y buenas prácticas.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4">
+    <div class="container d-flex justify-content-between">
+      <p class="mb-0">© 2025 Fernando Donoso R.</p>
+      <p class="mb-0">Construido con HTML • CSS • Bootstrap</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (opcional) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-NiZ3FJQF8Bqz0i8qf2zYp5mKQp3XQyJdY0qvYIh2r5KzI+Vq9Ew+WZpRrJcK0g7z5"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
